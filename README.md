@@ -1,24 +1,23 @@
-# README
+## vehicle_api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was created with Ruby on Rails.
+* Used public vehicle API https://vpic.nhtsa.dot.gov/api/.
+* Created ruby on rails API for getting makes, models of make, models of make by year.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+* First take a clone of this repo.
 
-* System dependencies
+  `git clone https://github.com/ansh-k/vehicle_api.git`
 
-* Configuration
+* Installed all dependency.
 
-* Database creation
+  `bundle install`
 
-* Database initialization
+* Start server.
 
-* How to run the test suite
+  `rails s`
 
-* Services (job queues, cache servers, search engines, etc.)
+* Start spec.
 
-* Deployment instructions
-
-* ...
+  `rspec`
