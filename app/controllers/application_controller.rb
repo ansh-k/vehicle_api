@@ -11,7 +11,10 @@ class ApplicationController < ActionController::API
   end
 
   def api_call path
-    JSON.parse open("#{Rails.application.secrets.api_url}#{path}?format=json").read
+    api_url = "#{Rails.application.secrets.api_url}#{path}?format=json"
+    Rails.cache.fetch(api_url, :expires => 3.days) do
+      JSON.parse open(api_url).read
+    end
   end
 
 end
